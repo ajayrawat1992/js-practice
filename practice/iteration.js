@@ -82,16 +82,12 @@
 // console.log(newvalues)
 
 
-const value=[10,20,30,40,50]
-const initialvalue=0
-const sum=value.reduce((accumulator,currentvalue)=> 
+// const value=[10,20,30,40,50]
+// const initialvalue=0
+// const sum=value.reduce((accumulator,currentvalue)=> 
 
- // console.log(`acc:${accumulator} and curr:${currentvalue}`)// this accumulator gets value =0 and currentvaluegets value from array
-   accumulator+currentvalue ,0)
-console.log(sum)
+//  // console.log(`acc:${accumulator} and curr:${currentvalue}`)// this accumulator gets value =0 and currentvaluegets value from array
+//    accumulator+currentvalue ,0)
+// console.log(sum)
       
-
-
-
-
 
