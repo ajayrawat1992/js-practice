@@ -31,12 +31,24 @@
         addNameOpti("c")
         addNameOpti("c++")
 
-        //to edit 
+        // edit 
+
         const editvalue=document.querySelector("li:nth-child(2)")
+        //console.log(editvalue.innerHTML)
         //editvalue.innerHTML="myruby"
         const newli=document.createElement("li")  // more optimized
         newli.textContent="myruby"
         editvalue.replaceWith(newli)
+       
+          //edit
+
+          const firstvalue=document.querySelector("li:first-child")
+          firstvalue.outerHTML="<li>js</li>"
+
+
+          //remove
+          const removeChild=document.querySelector("li:last-child")
+          removeChild.remove()    
 
 </script>
 </html>
