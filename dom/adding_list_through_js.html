@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding list through function in js</title>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addName(langname)
+    {
+        const li=document.createElement('li')
+        li.innerText=`${langname}`
+        document.querySelector('.language').appendChild(li)   //very common way..but it is not optimized way  because we traverse all through to the end 
+
+    }
+    addName("ruby")
+    addName("rust")
+
+    function addNameOpti(langname)
+    {
+        const li=document.createElement("li")
+        li.appendChild(document.createTextNode(langname))  //this approach is more optimized(uses DSA)
+        document.querySelector(".language").append(li)
+    }
+        addNameOpti("c")
+        addNameOpti("c++")
+
+        //to edit 
+        const editvalue=document.querySelector("li:nth-child(2)")
+        //editvalue.innerHTML="myruby"
+        const newli=document.createElement("li")  // more optimized
+        newli.textContent="myruby"
+        editvalue.replaceWith(newli)
+
+</script>
+</html>
