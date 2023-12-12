@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <h1>Amazing Images</h1>
+    <div>
+        <ul class="images">
+<li><img src="https://cdn-icons-png.flaticon.com/128/276/276085.png" alt="star" class="star" id="star"></li>
+<li><img src="https://cdn-icons-png.flaticon.com/128/276/276051.png" alt="cap" class="cap" id="cap"></li>
+<li><img src="https://cdn-icons-png.flaticon.com/128/276/276091.png" alt="toffee" class="toffee" id="toffee"></li>
+<li><img src="https://cdn-icons-png.flaticon.com/128/276/276112.png" alt="bell" class="bell" id="bell"></li><br>
+<li ><a href="https://www.google.com">google</a></li>
+
+   </ul>
+    </div>
+</body>
+<script>
+
+    // document.getElementById('cap').onclick=function()
+    // {
+    //     alert("hello")
+    // }
+
+//  document.querySelector("#cap").onclick=function()
+//  {
+//     alert('hello')
+//  }
+
+
+//  document.querySelector('.images').addEventListener('click',function(){
+//      console.log("inside the images");
+//  },false)  // by default it is false.
+
+//  document.getElementById("cap").addEventListener('click',function(e){
+//    e.stopPropagation()  // prevent further propogation of events in bubbling and capturing phases
+//     console.log('inside the cap')
+//  },false)
+
+
+document.querySelector(".images").addEventListener('click',function(e){
+console.log(e)
+console.log(e.target); // gives the node which is targeted
+//console.log(e.target.parentNode)  // gives the parent node of the node which is clicked
+
+console.log(e.target.tagName)  // defines which is IMG or LI tag
+if(e.target.tagName==='IMG')
+{
+    const removeit=e.target.parentNode;
+removeit.remove()  //remove the node onclick
+
+}
+
+},false)
+ 
+
+
+</script>
+</html>

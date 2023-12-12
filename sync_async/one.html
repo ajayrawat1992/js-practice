@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and sync</title>
+</head>
+<body>
+    <h1>JS BY AJAY RAWAT</h1>
+    <button id="stop">STOP</button>
+    
+</body>
+<script>
+
+    const myway=function(){
+        console.log("hello")
+        document.querySelector('h1').innerHTML="JS by rawat"
+    }
+    const clearme=setTimeout(myway,3000)
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(clearme)
+        console.log("stopped")
+    })
+</script>
+</html>
