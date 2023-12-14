@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+</head>
+<body>
+    <h1>Start should change the background color every second </h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+    
+</body>
+<script>
+     function randomColor()
+     {
+        const hex="0123456789ABCDEF"   // as  hexcode digits is  from 0-9 and A-F
+        let color="#"   // hexcode starts from #
+        for(let i=0;i<6;i++)
+        {
+            color+=hex[Math.floor(Math.random()*16)]  // generates no from 0 to 16 (excluding 16).if we want to remove 0 then add 1
+        }
+        return  color
+     }
+     console.log(randomColor())
+
+   let stopinterval;
+     document.getElementById("start").addEventListener('click',function(){
+        if(!stopinterval) // here stopinterval dont have any value
+        {                //this approach will remove unrequired case ex. if we double click the start button then color will display at double  speed  
+        stopinterval=setInterval(function(){
+        document.body.style.backgroundColor=randomColor()
+     },1000)
+        }
+     })
+     document.getElementById("stop").addEventListener('click',function(){
+     clearInterval(stopinterval)
+     stopinterval=null;  // it will clear stopinterval having no value         
+        
+     })
+   
+</script>
+</html>
